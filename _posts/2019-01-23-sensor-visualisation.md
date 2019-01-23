@@ -2,8 +2,8 @@
 layout: post
 title: Grafana with Postgre
 description: >
-
-image: /assets/img/grafana.png
+Data visualisation.
+image: /assets/img/grafana.png =250x250
 ---
 
 # Intro
