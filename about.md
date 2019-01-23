@@ -30,21 +30,18 @@ I'm interested in many things. Here is the list of some of them:
 
 If you are wondering how my dog looks like:
 
-In summer:
+- In summer:
+
 ![Tori]({{site.baseurl}}/assets/img/tory_summer.jpg){:.lead data-width="800" data-height="100" .center-image}
 Most cudly dog on earth => Tori
 {:.figure}
 
-In winter:
+- In winter:
+
 ![Tori_winter]({{site.baseurl}}/assets/img/tory_snow.jpg){:.lead data-width="800" data-height="100" .center-image}
 {:.figure}
 
-![Tori_gif]({{site.baseurl}}/assets/img/tory_gif.gif){: .center-image}
-
-
-In spring:
-![Tori_spring]({{site.baseurl}}/assets/img/tory_cool.jpg){: .center-image}
-
+- In spring:
 ![Tori_gif]({{site.baseurl}}/assets/img/tory.jpg){: .center-image}
 
 Besides my dog I'm also owner of three cats
@@ -53,4 +50,5 @@ Besides my dog I'm also owner of three cats
 - Leopold
 
 ![So_soft]({{site.baseurl}}/assets/img/cats.jpg){: .center-image}
-
+Fraaanz and Leopold
+{:.figure}
