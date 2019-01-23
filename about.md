@@ -14,7 +14,7 @@ order: 3
 Hy my name is Lucija Raženj. I'm student at Faculty of Electrical Engineering and Computing at University of Zagreb.
 
 
-I'm also dooin an internship at Serengetty as Backend Software developer, doing backend services mostly written in Java.
+I'm also dooin an internship at Mediatoolkit as Backend Software developer, doing backend services written in Java.
 
 
 ## Interests
