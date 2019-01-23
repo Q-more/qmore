@@ -2,8 +2,8 @@
 layout: post
 title: Grafana with Postgre
 description: >
-  Data visualisation
-image: /assets/img/grafana.png ==250x250
+ 
+image: /assets/img/grafana.png =250x250
 ---
 
 Sensor data visualisation with Grafana and PostGis running in Docker.
