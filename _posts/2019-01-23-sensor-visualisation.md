@@ -2,16 +2,18 @@
 layout: post
 title: Grafana with Postgre
 description: >
-  Sensor data visualisation with Grafana and Postgre database running in Docker.
+
 image: /assets/img/grafana.png
-image: /assets/img/postgre.png
-image: /assets/img/docker.png
 ---
 
-## Grafana
-* with docker:
+# Intro
+Sensor data visualisation with Grafana and PostGis running in Docker.
 
-      docker run -d --network=host -p 3000:3000 --name=grafana -e "GF_INSTALL_PLUGINS=grafana-worldmap-panel,grafana-simple-json-datasource,linksmart-sensorthings-datasource" grafana/grafana
+# Docker
+I create two containers, one for Grafana and second for database.
+
+## Grafana
+      docker run -d --network=host  --name=grafana -e "GF_INSTALL_PLUGINS=grafana-worldmap-panel,grafana-simple-json- datasource,linksmart-sensorthings-datasource" grafana/grafana
 
 + URL: http://localhost:3000/login
 + username : admin
@@ -27,16 +29,16 @@ image: /assets/img/docker.png
 + grafana host: localhost:25432
 + grafana database: postgres
 
-- **crete tables in database with script: db_dump_ddl.sql**
-- **fill database with SQL script: db_dump_dml.sql**
+- I run two scripts:
+- **create tables: db_ddl.sql**
+- **fill database: db_dml.sql**
 
-## Import dashboard
-- in Grafana:
+# Grafana panels
+## Worldmap Panel
+- location can be represent with longitude and latitude or with geohash.
 
-      create (plus icone) -> import -> Upload .json file -> sensors_dashboard.json
+![map]({{site.baseurl}}/assets/img/map.png)
 
-## Grafana World Map
-#### SQL example of query:
 - with longitude and latitude
 
       select time, value, latitude, longitude
@@ -48,7 +50,6 @@ image: /assets/img/docker.png
       select  time, value, geohas
       from "TableName" 
       where $__timeFilter("time")
-   
 
 - It is important to know that fields need to be named as those in this example, otherwise you have to assign alias:
 
@@ -58,34 +59,44 @@ image: /assets/img/docker.png
       st_y(location) as longitude
       from "TableName" 
       where $__timeFilter("timestamp")
+      
+## Graph
+![graf]({{site.baseurl}}/assets/img/graf.png)
 
+- SQL example:
 
-## User Interface
+      select timestamp as time, value as "name"
+      from "tableName"
+      where $__timeFilter("timestamp")
+    
+- in this case alias for value is used to name value that is displayed
+
+# Finale result
 
 ### Sensor values for SO2, CO and NO2
 
- ![Alt text](pictures/co2_co_so2_graf.png?raw=true)
+![SO2_CO,NO2_graf]({{site.baseurl}}/assets/img/co2_co_so2_graf.png)
 
 ### Sensor values and locations for CO 
 
- ![Alt text](pictures/co.png?raw=true)
+ ![co]({{site.baseurl}}/assets/img/co.png)
 
 ### Sensor values and locations for NO
 
- ![Alt text](pictures/no2.png?raw=true)
+ ![no2]({{site.baseurl}}/assets/img/no2.png)
 
 ### Sensor values and locations for Humidity
 
- ![Alt text](pictures/humidity.png?raw=true)
+ ![humidity]({{site.baseurl}}/assets/img/humidity.png)
 
 ### Sensor values and locations for Noise
 
- ![Alt text](pictures/noise.png?raw=true)
+  ![noise]({{site.baseurl}}/assets/img/noise.png)
 
 ### Sensor values and locations for Pressure
 
- ![Alt text](pictures/pressure.png?raw=true)
+ ![pressure]({{site.baseurl}}/assets/img/pressure.png)
 
 ### Sensor values and locations for Temperature
 
- ![Alt text](pictures/temperature.png?raw=true)
+ ![temperture]({{site.baseurl}}/assets/img/temperature.png)
