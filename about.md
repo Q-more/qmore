@@ -36,15 +36,17 @@ Most cudly dog on earth => Tori
 {:.figure}
 
 In winter:
-![Tori]({{site.baseurl}}/assets/img/tory_snow.jpg){:.lead data-width="800" data-height="100" .center-image}
+![Tori_winter]({{site.baseurl}}/assets/img/tory_snow.jpg){:.lead data-width="800" data-height="100" .center-image}
 {:.figure}
-![Tori]({{site.baseurl}}/assets/img/tory_gif.gif{: .center-image}
+
+![Tori_gif]({{site.baseurl}}/assets/img/tory_gif.gif{): .center-image}
 {:.figure}
 
 In spring:
-![Tori]({{site.baseurl}}/assets/img/tory_cool.jpg{: .center-image}
+![Tori_spring]({{site.baseurl}}/assets/img/tory_cool.jpg){: .center-image}
 {:.figure}
-![Tori]({{site.baseurl}}/assets/img/tory.jpg{: .center-image}
+
+![Tori_gif]({{site.baseurl}}/assets/img/tory.jpg){: .center-image}
 {:.figure}
 
 Besides my dog I'm also owner of three cats
@@ -52,5 +54,5 @@ Besides my dog I'm also owner of three cats
 - Vlatkica
 - Leopold
 
-![So soft]({{site.baseurl}}/assets/img/cats.jpg{: .center-image}
+![So_soft]({{site.baseurl}}/assets/img/cats.jpg){: .center-image}
 {:.figure}
