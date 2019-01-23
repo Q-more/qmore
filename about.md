@@ -42,6 +42,7 @@ Most cudly dog on earth => Tori
 {:.figure}
 
 - In spring:
+
 ![Tori_gif]({{site.baseurl}}/assets/img/tory.jpg){: .center-image}
 
 Besides my dog I'm also owner of three cats
