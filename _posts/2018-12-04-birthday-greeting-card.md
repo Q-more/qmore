@@ -1,6 +1,6 @@
 ---
 layout: post
-title: It's my birthday 🎉🎉
+title: It's my birthday
 description: >
   For my birthday I wished that my boyfriend makes me a greeting card. (That was a bay idea.)
 image: /assets/img/cake.jpg
