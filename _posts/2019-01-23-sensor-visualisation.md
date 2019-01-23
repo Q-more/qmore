@@ -5,14 +5,14 @@ description: >
  
 image: /assets/img/page.png
 ---
-
 Sensor data visualisation with Grafana and PostGis running in Docker.
 
 # Docker
 I create two containers, one for Grafana and second for database.
-
 ## Grafana
-      docker run -d --network=host  --name=grafana -e "GF_INSTALL_PLUGINS=grafana-worldmap-panel,grafana-simple-json- datasource,linksmart-sensorthings-datasource" grafana/grafana
+      docker run -d --network=host  --name=grafana 
+      -e "GF_INSTALL_PLUGINS=grafana-worldmap-panel,grafana-simple-json-datasource,
+      linksmart-sensorthings-datasource" grafana/grafana
 
 + URL: http://localhost:3000/login
 + username : admin
@@ -21,14 +21,15 @@ I create two containers, one for Grafana and second for database.
 **Grafana uses OpenStreetMap**
 
 ## PostGIS Database
-      sudo docker run --name postgis -p 25432:5432 -e POSTGRES_PASSWORD=postgres -d -t  mdillon/postgis
+      sudo docker run --name postgis -p 25432:5432 
+      -e POSTGRES_PASSWORD=postgres -d -t  mdillon/postgis
 
 + username: postgres
 + password: postgres
 + grafana host: localhost:25432
 + grafana database: postgres
 
-- I run two scripts:
+I run two scripts:
 - **create tables: db_ddl.sql**
 - **fill database: db_dml.sql**
 
