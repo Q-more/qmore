@@ -48,6 +48,7 @@ image: /assets/img/docker.png
       select  time, value, geohas
       from "TableName" 
       where $__timeFilter("time")
+   
 
 - It is important to know that fields need to be named as those in this example, otherwise you have to assign alias:
 
