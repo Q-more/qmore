@@ -13,7 +13,7 @@
 ### Pods
  - collection of containers
 - smallest unit of deployment
-![K8s Arhitecture](./pictures/pods.jpg)
+![K8s Arhitecture](./assets/img/pods.jpg)
 ### Services
 - collection of pods
 - exposed as and endpoint
@@ -23,9 +23,9 @@
 - creates replica sets and pods
 ### Node
 - machine which run workloads
-![K8s Arhitecture](./pictures/node.jpg)
+![K8s Node](./assets/img/node.jpg)
 ## Arhitecture
-![K8s Arhitecture](./pictures/k8s_arhitecture.jpg)
+![K8s Arhitecture](./assets/img/k8s_arhitecture.jpg)
 - 3 main components:
     ### Master Components:
 
