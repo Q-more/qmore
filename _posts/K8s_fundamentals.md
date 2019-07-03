@@ -1,31 +1,20 @@
 # Kubernetes
-- for running distributed systems resiliently
-## What can you do with K8s
-1. SERVICE DESCOVERY AND LOAD BALANCING
-2. STORAGE ORCHESTRATION
-3. AUTOMATED ROLLOUTS AND ROLLBACKS
-4. AUTOMATIC BIN PACKING
-    -  specify CPU and RAM usage for each container 
-5. SELF-HEALING
-6. SECRET AND CONFIGURATION MANAGEMENT
 
-## Terminology
-### Pods
- - collection of containers
-- smallest unit of deployment
-![K8s Arhitecture]({{site.baseurl}}/assets/img/pods.jpg)
-### Services
-- collection of pods
-- exposed as and endpoint
-### Replicates
-- ensure scalability and availability
-### Deployment
-- creates replica sets and pods
-### Node
-- machine which run workloads
-![K8s Node]({{site.baseurl}}/assets/img/node.jpg)
-## Arhitecture
-![K8s Arhitecture]({{site.baseurl}}/assets/img/k8s_arhitecture.jpg)
+    Kubernetes is an open-sorce system for automating deployment, scaling and management of containerizes applications.
+
+## What can you do with K8s? 
+1. Service Descovery and load balancing
+2. Storage Orchestration
+3. Automated rollouts and rollbacks
+4. Automatic bin packing
+    -  specify CPU and RAM usage for each container 
+5. Self-healing
+6. Secret and configuration management
+
+
+## Arhitecture of Kubernetes?
+![K8s Arhitecture](./pictures/k8s_arhitecture.jpg)
+
 - 3 main components:
     ### Master Components:
 
@@ -48,27 +37,24 @@
 
     ### Addons
     - Web UI (Dashboard)
- ## Deployment           
- - Deployment file :
-    * configuration is given in yaml format
-    * pod configuration (smallest unit of deployement) :
-        - defining containers images
-        - ports
-        - you can define number of running pods
-        - can have one or more pads
 
 ## How to work with Kubernetes?
+
         You need to use Kubernetes API objects to describe your cluster's desiered state.
+
 - usually desired state is created via the command-line interface **kubectl**
 
 ## What are Kubernetes Objects?
-        Kubernetes Objects are persistent entities int the Kubernetes system. Kubernetes use them to represent the state of your claster.
+
+        Kubernetes Objects are persistent entities in the Kubernetes system. Kubernetes use them to represent the state of your claster.
+
 - they can describe:
     - running applications (in containers)
     - available resources
     - behaviour policies (restart,upgrade and fault-tolerance)
+
 ### Object
-- every object contains two fields space and status that govern the object's configuration
+- every object contains two main fields space and status that govern the object's configuration
 - **spce** - Describes your desired state for the object.
     - it is mandatory
 
@@ -78,7 +64,7 @@ Exmple:
 
      Kubernetes Deployment is an object that represent an application running on your cluster. For that object you need to provide configuration like "I want three replicas of the application to be running!". That configuration file is save in spec field.
 
-### How to describe Kubernetes Object?
+### Object description
 - by providing the object spec that describes its desired state, as well as basic information about the bject 
 - most often that information is provided in **.yaml** file such as (application/deployment.yaml ):
 
@@ -112,12 +98,34 @@ spec:
         - **namespace**
     - **spce**: the precise format of this object is different for every Kubernetes object and contains nested fields specific to the object
 
-
 ## How kubernetes works?
-        Kubernetes Control Plane makes the cluster's current state match the desired state via the **Pod Lifecycle Event Generator**
+
+        Kubernetes Control Plane makes the cluster's current state match the desired state via the Pod Lifecycle Event Generator
+
 - there are a number of abstractions that represent the state of your system
 - abstractions are represented by objects in the **Kubernetes API** :
     - Pod
     - Services
     - Volume
     - Namespace
+
+## What is Kubernetes Control Plane?
+
+
+## What is Pod?
+
+    A Pod is the basic execution unit of a Kubernetes application. The smallest and simplest unit of computing that can be created and managed in Kubernetes.
+
+- group of one or more containers with shared storage/network and specification for how tu run the containers
+- in terms of Docker : group of Docker containers with shared namespaces and filesystem volumes
+
+- pod's contents run in a shared context, but individual applications may have further sub-isolation applied
+- applications within a Pod share:
+    * IP address and port space (can find each other via **localhost**)
+    * volumes (defined as part of a Pod)
+- containers in different Pods have distinct IP addresses and usually communicate with each other via **Pod IP addresses**   
+- motivation for Pods:
+    * manegement
+    * resource sharing and communication    
+
+### Pod Lifecycle
