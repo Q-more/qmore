@@ -34,15 +34,15 @@ image: assets/img/Kubernetes_Logo.png
      - Etcd
          - consistent and highly-avalible distributed key value store for all cluster data/state
         
- - **Node Components: - on every node**
+  - **Node Components: - on every node**
      - Kube-proxy
      - Container Runtime
          - for running and manageing a container's lifecycle
      - Kubelet
          - agent which communicates with the Master node
-         - gets pod specification through the API server and executes the containers associated with the Pod and ensures that the containers described int those Pod are running and helthy
+         - gets pod specification through the API server and executes the containers associated with the Pod and ensures that  the containers described int those Pod are running and helthy
 
- - **Addons**
+  - **Addons**
     - Web UI (Dashboard)
 
 ### Nodes
