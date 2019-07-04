@@ -1,5 +1,7 @@
 # Kubernetes
 
+![K8s Pod]({{site.baseurl}}/assets/img/Kubernetes_Logo.png)
+
     Kubernetes is an open-sorce system for automating deployment, 
     scaling and management of containerizes applications.
 
@@ -204,7 +206,7 @@ spec:
 
 ## Managing multiple Containers
 
-![K8s Pod](./pictures/pod.svg)
+![K8s Pod]({{site.baseurl}}/assets/img/pod.svg)
 
 - containers in a Pod are automatically co-located and co-scheduled on the same physical or virtual machine in the cluster
 - you shoud run multiple containers in a single Pod if containers are tightly coupled
