@@ -2,7 +2,7 @@
 layout: post
 title: Kubernetes fundamentals
 description: >
- I was taking some notes while learning K8s and this is what i got! :)
+ I was taking some notes while learning K8s and this is the result! :)
 image: assets/img/Kubernetes_Logo.png
 ---
 
