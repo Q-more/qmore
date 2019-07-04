@@ -14,7 +14,6 @@
 
 
 ## Arhitecture of Kubernetes?
-![K8s Arhitecture](./pictures/k8s_arhitecture.jpg)
 - 3 main components:
 
   ### - Master Components - only on master
