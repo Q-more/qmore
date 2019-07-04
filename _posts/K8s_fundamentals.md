@@ -1,6 +1,12 @@
-# Kubernetes
+---
+layout: post
+title: Kubernetes fundamentals
+description: >
+ I was taking some notes while learning K8s and this is what i got! :)
+image: assets/img/Kubernetes_Logo.png
+---
 
-![K8s Pod]({{site.baseurl}}/assets/img/Kubernetes_Logo.png)
+# Kubernetes
 
     Kubernetes is an open-sorce system for automating deployment, 
     scaling and management of containerizes applications.
