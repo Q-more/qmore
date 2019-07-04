@@ -23,29 +23,27 @@ image: assets/img/Kubernetes_Logo.png
 
 ## Arhitecture of Kubernetes?
 - 3 main components:
+  ### Master Components - only on master
 
-  ### - Master Components - only on master
+     Make global decisions about claster, detecting and responding to cluster events,
+     responsible for maintaining the desired state for your cluster.
 
-    Make global decisions about claster, detecting and responding to cluster events,
-    responsible for maintaining the desired state for your cluster.
-
-    - Kube-api server
-    - Kube-scheduler
-    - Kube-controller-manager
-    - Etcd
-        - consistent and highly-avalible distributed key value store for all cluster data/state
+     - Kube-api server
+     - Kube-scheduler
+     - Kube-controller-manager
+     - Etcd
+         - consistent and highly-avalible distributed key value store for all cluster data/state
         
+    ### Node Components: - on every node
+     - Kube-proxy
+     - Container Runtime
+         - for running and manageing a container's lifecycle
+     - Kubelet
+         - agent which communicates with the Master node
+         - gets pod specification through the API server and executes the containers associated with the Pod and ensures that the containers described int those Pod are running and helthy
 
-    ### - Node Components: - on every node
-    - Kube-proxy
-    - Container Runtime
-        - for running and manageing a container's lifecycle
-    - Kubelet
-        - agent which communicates with the Master node
-        - gets pod specification through the API server and executes the containers associated with the Pod and ensures that the containers described int those Pod are running and helthy
-
-    ### - Addons
-    - Web UI (Dashboard)
+    ### Addons
+     - Web UI (Dashboard)
 
 ### Nodes
 
@@ -252,7 +250,7 @@ spec:
     image: busybox
     command: ['sh', '-c', 'echo Hello Kubernetes! && sleep 3600']
 ```
- # Links
+# Links
  
 - https://medium.com/google-cloud/kubernetes-101-pods-nodes-containers-and-clusters-c1509e409e16
 
