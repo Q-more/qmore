@@ -1,6 +1,7 @@
 # Kubernetes
 
-    Kubernetes is an open-sorce system for automating deployment, scaling and management of containerizes applications.
+    Kubernetes is an open-sorce system for automating deployment, 
+    scaling and management of containerizes applications.
 
 ## What can you do with K8s? 
 1. Service Descovery and load balancing
@@ -18,7 +19,8 @@
 
   ### - Master Components - only on master
 
-    Make global decisions about claster, detecting and responding to cluster events, responsible for maintaining the desired state for your cluster.
+    Make global decisions about claster, detecting and responding to cluster events,
+    responsible for maintaining the desired state for your cluster.
 
     - Kube-api server
     - Kube-scheduler
@@ -96,7 +98,9 @@
 
 Exmple:
 
-     Kubernetes Deployment is an object that represent an application running on your cluster. For that object you need to provide configuration like "I want three replicas of the application to be running!". That configuration file is save in spec field.
+     Kubernetes Deployment is an object that represent an application running on your cluster. 
+     For that object you need to provide configuration like "I want three replicas of the application to be running!".
+     That configuration file is save in spec field.
 
 ### Object description
 - by providing the object spec that describes its desired state, as well as basic information about the bject 
@@ -160,7 +164,8 @@ spec:
 
 ## What is Pod?
 
-    A Pod is the basic execution unit of a Kubernetes application. The smallest and simplest unit of computing that can be created and managed in Kubernetes.
+    A Pod is the basic execution unit of a Kubernetes application. 
+    The smallest and simplest unit of computing that can be created and managed in Kubernetes.
 
 - group of one or more containers with shared storage/network and specification for how tu run the containers
 - in terms of Docker : group of Docker containers with shared namespaces and filesystem volumes
