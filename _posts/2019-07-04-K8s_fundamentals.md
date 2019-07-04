@@ -210,7 +210,7 @@ spec:
 
 ## Managing multiple Containers
 
-![K8s Pod]({{site.baseurl}}/assets/img/pod.svg)
+![K8s Pod]({{site.baseurl}}/assets/img/pod.svg){:.lead data-width="800" data-height="100" .center-image}
 
 - containers in a Pod are automatically co-located and co-scheduled on the same physical or virtual machine in the cluster
 - you shoud run multiple containers in a single Pod if containers are tightly coupled
